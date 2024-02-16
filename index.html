@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vincent Parot Automobile</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Image/Voiture.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/b43e4f33eb.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -13,38 +15,104 @@
             <h1>Garage V.Parrot</h1>
         </div>
         <ul class="menu">
-            <li><a href="#">Acceueil</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Ventes</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#cars">Ventes</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="number">
-            <p>+0523541010</p>
+            <p>0523541010</p>
         </div>
     </header>
 
 <!-- home -->
-<section class="home">
+<section id="home">
     <div class="left">
         <h1><span></span></h1>
         n
     </div>
     <div class="right">
-        <img src="image/cadran de vitesse reduit.jpg">
+        <img src="image/garage.jpg">
     </div>
 </section>
 
+<!--Services-->
+<section id="services">
+    <h1 class="title">Nos Services</h1>
+    <div class="list_services">
+        <div class="service">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <h3>Réparation</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nemo quos asperiores dolor eos susci</p>
+        </div>
+        <div class="service">
+            <i class="fa-solid fa-truck-front"></i>
+            <h3>Dépannage</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. sLabore nemo quos asperiores dolor eos susci</p>
+        </div>
+        <div class="service">
+            <i class="fa-solid fa-gears"></i>
+            <h3>Révision</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quidem quia, aperiam reprehenderit incidunt explicabo inventore.
+                 Iusto, unde labore saepe rem neque itaque, explicabo, quod dolorum harum minima velit dolore nemo.</p>
+        </div>
+    </div>
+</section>
+
+<!--ventes-->
+
+<section id="cars">
+    <h1 class="title">Nos Vehicules</h1>
+    <div class="images">
+        <ul>
+            <li class="car">
+                <div>
+                    <img src="image/tiguan face-mike-bird-14038627.jpg">
+                </div>
+                <div>
+                    <img src="image/tiguan cote-mike-bird-14038622.jpg">
+                </div>
+                <span>Volswagen Tiguan</span>
+                <span class="prix">33970 </span>
+            </li>
+            <li class="car">
+                <div>
+                    <img src="image/hondacivicxface-jakub-pabis-16475138.jpg">
+                </div>
+                <span>Honda civic x type R</span>
+                <span class="prix">46000</span>
+            </li>
+            <li class="car">
+                <div>
+                    <img src="image/mercedesgleface-mike-bird-14719364.jpg">
+                </div>
+                <span>Mercedes Gle 300d</span>
+                <span class="prix">77990</span>
+            </li>
+            <li class="car">
+                <div>
+                    <img src="image/toyotagt86face-erik-mclean-17507723.jpg">
+                </div>
+                <span>Toyota gt86</span>
+                <span class="prix">27000</span>
+            </li>
+        </ul>
+    </div>
+
+</section>
+
 <!--contact-->
-<section class="contact">
-    <h1 class="title">Contactez nous </h1>
+<section id="contact">
+    <h1 class="title">Contactez nous</h1>
     <div class="form-image">
         <form>
             <input type="text" placeholder="Nom">
-            <input type="text" placeholder="Adresse Mail">
+            <input type="mail" placeholder="Adresse Mail">
             <input type="text" placeholder="Objet du message">
             <textarea id="" cols="30" rows="10" placeholder="Votre message"></textarea>
             <button class="button-link">
-                <a href="#">Envoyer votre message</a>
+                <a href="#button-link">Envoyer votre message</a>
             </button>
         </form>
 
@@ -52,7 +120,25 @@
 </section>
 
 <footer>
-    <p>tout droits reserves </p>
+    <span>© 2024</span>
+    <p>tout droits reserves</p>
 </footer>
+<script>
+    //script pour les slides 
+    var Swipes = new Swiper('.swiper-container', {
+          loop:true,
+        speed: 1000,
+        autoplay: {
+            delay:2500,
+        }
+           navigation: {
+                 nextEl: '.swiper-buttont-next',
+                 prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>
 </body>
 </html>

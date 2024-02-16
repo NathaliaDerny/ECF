@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap')
 
-.rajdhani-regular {
+ .rajdhani-regular {
     font-family: "Rajdhani", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -16,6 +16,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all.2s linear;
+    text-decoration: none;
+    border: none;
 }
 
 a{
@@ -49,11 +52,14 @@ header .logo img {
 
 header .logo h1 {
     font-size: 30px;
-    color: ;
+    color: black;
 }
 
 .menu {
+    font-family: "Rajdhani", sans-serif;
     display: flex;
+    font-weight: bold;
+    font-size: 20px;
 }
 .menu li {
     margin-left: 50px;
@@ -66,11 +72,11 @@ header .logo h1 {
 }
 
 .menu li a {
-    color: ;
+    color: black;
     transition: 0.5s;
 }
 .menu li a:hover {
-    color: ;
+    color: #D92332;
     font-size: 15px;
 }
 .menu li:hover::after {
@@ -92,7 +98,7 @@ header .logo h1 {
 }
 
 /* home css */
-.home {
+#home {
     padding: 0 5%;
     margin: 50px 0;
     display: flex;
@@ -100,21 +106,21 @@ header .logo h1 {
     justify-content: space-between;
     height: calc(100vh - 200px);
 }
-.home .left {
+#home .left {
     width: 55%;
 }
-.home .right {
+#home .right {
     width: 40%;
     height: 100%;
 }
-.home .right  img {
+#home .right  img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 0 10px (0,0,0,0.1);
 }
-.home .left h1 {
+#home .left h1 {
     font-size: 100px;
     color: ;
     font-weight: 600;
@@ -122,12 +128,99 @@ header .logo h1 {
     margin-left: -8px;
     margin-bottom: -10px;
 }
+/*services*/
+#services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+.list_services {
+    margin: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.service {
+    width: 25%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    padding: 20px;
+    margin: 20px;
+}
+.service i {
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D92332;
+    color: #f2f2f2;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.service h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.service p {
+    font-size: 12px;
+}
+.service a {
+    margin-top: 10px;
+    color: #D92332;
+    padding: 5px 20px;
+    border: 1px solid #D92332;
+    font-size: 12px;
+}
+
+/*voitures*/
+.images{
+    margin: 100px auto;
+    padding: 0 8%;
+}
+.images ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.images li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.665%;
+    transition: 0.5s;
+    height: 300px;
+    width: 28%;
+}
+.images li div {
+    width: 100%;
+    height: 60%;
+}
+.images li div img {
+    height: 100%;
+    width: 100%;
+}
+.images li span {
+    color: black;
+    font-size: 18px;
+}
 
 /*Contact Css*/
 .form-image {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
+    margin-right: 10%;
+    margin-bottom: 10%;
 }
 .form-image form {
     width: 35%;
@@ -144,34 +237,20 @@ header .logo h1 {
     resize: none;
     width: 100%;
 }
+.button-link {
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 25px;
+    background: linear-gradient(#D92332,#D9777F);
+    border-radius: 60px; 
+}
+
+/*footer*/
 footer {
-    background-color: ;
-    color: ;
+    background-color: black;
+    color: white;
     text-align: center;
     font-size: 14px;
     padding: 10px;
 }
 
-/*Mobile responsive*/
-@media (max-width:628px) {
-    header .logo h1 {
-        font-size: 15px;
-    }
-    header .logo img {
-        width: 30px;
-        height: 30px;
-    }
-    header .menu {
-        display: none;
-    }
-    .number {
-        display: none;
-    }
-    .home {
-        flex-direction: column-reverse;
-        height: fit-content;
-    }
-    .home .left , .home .right {
-        width: 100%;
-    }
-}
