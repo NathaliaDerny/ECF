@@ -10,6 +10,11 @@
 </head>
 <body>
     <header>
+        <!--menu responsive-->
+        <div class="menu_toggle">
+            <span></span>
+        </div>
+
         <div class="logo">
             <img src="image/Logo v parrot.png" alt="">
             <h1>Garage V.Parrot</h1>
@@ -70,9 +75,6 @@
                 <div>
                     <img src="image/tiguan face-mike-bird-14038627.jpg">
                 </div>
-                <div>
-                    <img src="image/tiguan cote-mike-bird-14038622.jpg">
-                </div>
                 <span>Volswagen Tiguan</span>
                 <span class="prix">33970 </span>
             </li>
@@ -105,40 +107,37 @@
 <!--contact-->
 <section id="contact">
     <h1 class="title">Contactez nous</h1>
-    <div class="form-image">
-        <form>
-            <input type="text" placeholder="Nom">
-            <input type="mail" placeholder="Adresse Mail">
-            <input type="text" placeholder="Objet du message">
-            <textarea id="" cols="30" rows="10" placeholder="Votre message"></textarea>
-            <button class="button-link">
-                <a href="#button-link">Envoyer votre message</a>
-            </button>
-        </form>
-
-    </div>
+        <div class="ketchup">
+         <div class="localisation">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.4229800115886!2d1.4164661905109344!3d43.6601721774776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aea57197c94627%3A0xe90d6c6e836c738!2sHyundai%20-%20Sipa%20Automobiles%20-%20Toulouse%20Nord!5e0!3m2!1sfr!2sfr!4v1708252008329!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+         <div class="form-image">
+             <form>
+                 <input type="text" placeholder="Nom">
+                 <input type="mail" placeholder="Adresse Mail">
+                 <input type="text" placeholder="Objet du message">
+                 <textarea id="" cols="30" rows="10" placeholder="Votre message"></textarea>
+                 <button class="button-link">
+                     <a href="#button-link">Envoyer votre message</a>
+                 </button>
+             </form>
+         </div>
+        </div>
 </section>
 
 <footer>
     <span>© 2024</span>
-    <p>tout droits reserves</p>
+    <p>Tout droits reserves</p><button class="login_btn">Administrateur</button>
 </footer>
+
 <script>
-    //script pour les slides 
-    var Swipes = new Swiper('.swiper-container', {
-          loop:true,
-        speed: 1000,
-        autoplay: {
-            delay:2500,
-        }
-           navigation: {
-                 nextEl: '.swiper-buttont-next',
-                 prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-    });
+    var menu_toggle = document.querySelector('.menu_toggle');
+    var menu = document.querySelector('.menu');
+
+    menu_toggle.onclick = function(){
+        menu.classList.toggle('responsive');
+    }
 </script>
+
 </body>
 </html>
