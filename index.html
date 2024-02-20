@@ -33,12 +33,34 @@
 <!-- home -->
 <section id="home">
     <div class="left">
-        <h1><span></span></h1>
-        n
+        <h1>Le garage Vincent Parrot</h1>
+        <p>Vincent Parrot, fort de ses 15 années d'expérience dans la réparation automobile, a ouvert
+            son propre garage à Toulouse en 2021.
+            Depuis 2 ans, nous proposons une large gamme de services: réparation de la carrosserie et de la
+            mécanique des voitures ainsi que leur entretien régulier pour garantir leur performance et
+            leur sécurité.</p>
     </div>
     <div class="right">
         <img src="image/garage.jpg">
     </div>
+</section>
+
+<!--Avis-->
+<section id="Avis">
+    <h1 class="title">Avis Client</h1>
+    <div class="avis_client">
+        <i class="fa-solid fa-user"></i>
+        <p></p>
+    </div>
+    <div class="avis_client">
+        <i class="fa-solid fa-user"></i>
+        <p></p>
+    </div>
+    <div class="avis_client">
+        <i class="fa-solid fa-user"></i>
+        <p></p>
+    </div>
+
 </section>
 
 <!--Services-->
@@ -75,28 +97,28 @@
                 <div>
                     <img src="image/tiguan face-mike-bird-14038627.jpg">
                 </div>
-                <span>Volswagen Tiguan</span>
+                <h3>Volswagen Tiguan</h3>
                 <span class="prix">33970 </span>
             </li>
             <li class="car">
                 <div>
                     <img src="image/hondacivicxface-jakub-pabis-16475138.jpg">
                 </div>
-                <span>Honda civic x type R</span>
+                <h3>Honda civic x type R</h3>
                 <span class="prix">46000</span>
             </li>
             <li class="car">
                 <div>
                     <img src="image/mercedesgleface-mike-bird-14719364.jpg">
                 </div>
-                <span>Mercedes Gle 300d</span>
+                <h3>Mercedes Gle 300d</h3>
                 <span class="prix">77990</span>
             </li>
             <li class="car">
                 <div>
                     <img src="image/toyotagt86face-erik-mclean-17507723.jpg">
                 </div>
-                <span>Toyota gt86</span>
+                <h3>Toyota gt86</h3>
                 <span class="prix">27000</span>
             </li>
         </ul>
@@ -125,14 +147,15 @@
         </div>
 </section>
 
+<!--Footer-->
 <footer>
     <span>© 2024</span>
     <p>Tout droits reserves</p><button class="login_btn">Administrateur</button>
 </footer>
 
 <script>
-    var menu_toggle = document.querySelector('.menu_toggle');
-    var menu = document.querySelector('.menu');
+    let menu_toggle = document.querySelector('.menu_toggle');
+    let menu = document.querySelector('.menu');
 
     menu_toggle.onclick = function(){
         menu.classList.toggle('responsive');
